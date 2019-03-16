@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time</title>
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+	<style type="text/css">
+		div
+		{
+			text-align: center;
+			font-size: 120px;
+			color: #1DC251;
+		}
+		p
+		{
+			color: red;
+		}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	var today = new Date;
+	var days = 0;
+	var holidays = 0;
+
+	if(today.getMonth() == 2)
+	{
+		days = 31 - today.getDate() + 30 + 24;
+		if(today.getDate() < 23)
+		{
+			holidays += 2;
+			if(today.getDate() < 16)
+			{
+				holidays += 2;
+				if(today.getDate() < 9)
+				{
+					holidays += 2;
+					if(today.getDate() < 8)
+					{
+						holidays += 1;
+					}
+				}
+			}
+		}
+		if(today.getDay() == "6")
+		{
+			holidays += 1;
+		}
+		if(today.getDay()>24)
+		{
+			holidays = 31 - today.getDate();
+		}
+		else
+		{
+			holidays += 7; 
+		}
+		holidays += 19;
+	}
+
+	if(today.getMonth() == 3)
+	{
+		days = 30 - today.getMonth() + 24;
+		if(today.getDate() < 27)
+		{
+			holidays += 2;
+			if(today.getDate() < 20)
+			{
+				holidays += 2;
+				if(today.getDate() < 13)
+				{
+					holidays += 2;
+					if(today.getDate() < 6)
+					{
+						holidays += 2;
+					}
+				}
+			}
+		}
+		if(today.getDay() == "6")
+		{
+			holidays += 1;
+		}
+		holidays += 11;
+	}
+
+	if(today.getMonth() == 4)
+	{
+		days = 24 - today.getMonth();
+		if(today.getDate() < 18)
+		{
+			holidays += 2;
+			if(today.getDate() < 11)
+			{
+				holidays += 2;
+				if(today.getDate() < 6)
+				{
+					holidays = holidays + 7 - today.getDate();
+				}
+				if(today.getDate() > 5 && today.getDate < 9)
+				{
+					holidays += 2;
+				}
+			}
+		}
+		if(today.getDay() == "6")
+		{
+			holidays += 1;
+		}
+	}
+	document.write("<div>",days - holidays,"<div>");
+</script>
+<p>Remain</p>
+</body>
+</html>
