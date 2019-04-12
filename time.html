@@ -22,43 +22,34 @@
 	var days = 0;
 	var holidays = 0;
 
-	if(today.getMonth() == 2)
+	if(today.getMonth == 4)
 	{
-		days = 31 - today.getDate() + 30 + 24;
-		if(today.getDate() < 23)
+		days = 24 - today.getDate();
+		if(today.getDate() < 25)
 		{
 			holidays += 2;
-			if(today.getDate() < 16)
+			if(today.getDate() < 18)
 			{
 				holidays += 2;
 				if(today.getDate() < 9)
 				{
-					holidays += 2;
-					if(today.getDate() < 8)
+					holidays += 4;
+					if(today.getDate() < 6)
 					{
-						holidays += 1;
+						holidays += 5 - today.getDate(); 
 					}
 				}
 			}
 		}
-		if(today.getDay() == "6")
+		if(today.getDay() == "6" && today.getDate > 11)
 		{
 			holidays += 1;
 		}
-		if(today.getDay()>24)
-		{
-			holidays = 31 - today.getDate();
-		}
-		else
-		{
-			holidays += 7; 
-		}
-		holidays += 19;
 	}
 
 	if(today.getMonth() == 3)
 	{
-		days = 30 - today.getMonth() + 24;
+		days = 30 - today.getDate() + 13;
 		if(today.getDate() < 27)
 		{
 			holidays += 2;
@@ -68,36 +59,7 @@
 				if(today.getDate() < 13)
 				{
 					holidays += 2;
-					if(today.getDate() < 6)
-					{
-						holidays += 2;
-					}
-				}
-			}
-		}
-		if(today.getDay() == "6")
-		{
-			holidays += 1;
-		}
-		holidays += 11;
-	}
 
-	if(today.getMonth() == 4)
-	{
-		days = 24 - today.getMonth();
-		if(today.getDate() < 18)
-		{
-			holidays += 2;
-			if(today.getDate() < 11)
-			{
-				holidays += 2;
-				if(today.getDate() < 6)
-				{
-					holidays = holidays + 7 - today.getDate();
-				}
-				if(today.getDate() > 5 && today.getDate < 9)
-				{
-					holidays += 2;
 				}
 			}
 		}
