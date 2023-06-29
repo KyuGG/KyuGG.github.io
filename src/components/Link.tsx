@@ -4,7 +4,7 @@ import '../styles/link.scss'
 const Link: preact.FunctionComponent<LinkProps> = ({ social }) => {
 	return (
 		<a
-			className='link'
+			className='link gradient-box'
 			href={socialUrl[social]}
 			target='blank'
 		>

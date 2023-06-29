@@ -1,10 +1,10 @@
+@import '../variables';
+
 .link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 40px 180px 40px 20px;
-	border: 3px solid black;
-	border-radius: 20px;
 	margin: 10px;
 	font-size: 16pt;
 
@@ -12,7 +12,7 @@
 	transition: 0.3s;
 
 	&:hover {
-		background: rgb(53, 53, 53);
+		background: $hover-color;
 
 		.social-logo {
 			transform: scale(1.1);
@@ -29,7 +29,19 @@
 	}
 }
 
-@media screen and (max-width: 450px) {
+.gradient-box {
+	background: linear-gradient($background-color, $background-color) padding-box,
+		linear-gradient(to right, $link-color, aqua) border-box;
+	border-radius: 2em;
+	border: 4px solid transparent;
+
+	&:hover {
+		background: linear-gradient($hover-color, $hover-color) padding-box,
+			linear-gradient(to right, $link-color, aqua) border-box;
+	}
+}
+
+@media screen and (max-width: 473px) {
 	.link {
 		margin: 10px auto;
 		padding: 20px 40px 20px 20px;
