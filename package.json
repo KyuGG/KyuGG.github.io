@@ -1,0 +1,24 @@
+{
+	"name": "kyugg.github.io",
+	"private": true,
+	"version": "0.0.0",
+	"homepage": "https://kyugg.github.io",
+	"type": "module",
+	"scripts": {
+		"predeploy": "npm run build",
+		"deploy": "gh-pages -d dist",
+		"dev": "vite --host",
+		"build": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"preact": "^10.13.2"
+	},
+	"devDependencies": {
+		"@preact/preset-vite": "^2.5.0",
+		"gh-pages": "^5.0.0",
+		"sass": "^1.63.6",
+		"typescript": "^5.0.2",
+		"vite": "^4.3.9"
+	}
+}
