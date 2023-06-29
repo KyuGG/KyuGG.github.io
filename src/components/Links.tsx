@@ -6,6 +6,7 @@ const Links: preact.FunctionComponent = () => {
 		<>
 			<Link social={Social.GitHub} />
 			<Link social={Social.Steam} />
+			<Link social={Social.YouTube} />
 		</>
 	)
 }

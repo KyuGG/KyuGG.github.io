@@ -17,6 +17,7 @@ const Link: preact.FunctionComponent<LinkProps> = ({ social }) => {
 const socialUrl: Record<Social, string> = {
 	[Social.GitHub]: 'https://github.com/KyuGG',
 	[Social.Steam]: 'https://steamcommunity.com/id/Kyu_GG/',
+	[Social.YouTube]: 'https://www.youtube.com/@kyu_gg',
 }
 
 export interface LinkProps {
