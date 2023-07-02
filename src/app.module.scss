@@ -1,0 +1,15 @@
+@import 'variables';
+
+.name {
+	background-image: linear-gradient(to right, $link-color, aqua);
+	background-clip: content-box;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	padding: 6px;
+
+	transition: 0.3s;
+
+	@media screen and (max-width: $mobileWidth) {
+		font-size: 26pt;
+	}
+}

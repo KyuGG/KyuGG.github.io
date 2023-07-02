@@ -1,0 +1,10 @@
+@import '../variables';
+
+.social-logo {
+	width: 80px;
+	transition: 0.3s;
+
+	@media screen and (max-width: $mobileWidth) {
+		width: 50px;
+	}
+}

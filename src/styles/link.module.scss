@@ -10,12 +10,13 @@
 
 	cursor: pointer;
 	transition: 0.3s;
+	-webkit-tap-highlight-color: transparent;
 
 	&:hover {
 		background: $hover-color;
 
 		.social-logo {
-			transform: scale(1.1);
+			transform: rotateZ(15deg) scale(1.2);
 		}
 
 		span {
@@ -26,6 +27,11 @@
 	span {
 		margin-left: 20px;
 		transition: 0.3s;
+	}
+
+	@media screen and (max-width: $mobileWidth) {
+		margin: 10px auto;
+		padding: 20px 40px 20px 20px;
 	}
 }
 
@@ -38,12 +44,5 @@
 	&:hover {
 		background: linear-gradient($hover-color, $hover-color) padding-box,
 			linear-gradient(to right, $link-color, aqua) border-box;
-	}
-}
-
-@media screen and (max-width: 473px) {
-	.link {
-		margin: 10px auto;
-		padding: 20px 40px 20px 20px;
 	}
 }

@@ -1,14 +1,18 @@
-import '../styles/logo.scss'
 import { LinkProps } from './Link'
+import styles from '../styles/logo.module.scss'
 
-const Logo: preact.FunctionComponent<LinkProps> = ({ social }) => {
+const Logo: preact.FunctionComponent<LogoProps> = ({ social, className }) => {
 	return (
 		<img
-			className='social-logo'
+			className={`${className} ${styles.socialLogo}`}
 			src={socialAvatarUrl[social]}
 			alt='?'
 		/>
 	)
+}
+
+interface LogoProps extends LinkProps {
+	className: string
 }
 
 export enum Social {

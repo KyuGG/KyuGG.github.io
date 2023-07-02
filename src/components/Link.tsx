@@ -1,14 +1,17 @@
 import Logo, { Social } from './Logo'
-import '../styles/link.scss'
+import styles from '../styles/link.module.scss'
 
 const Link: preact.FunctionComponent<LinkProps> = ({ social }) => {
 	return (
 		<a
-			className='link gradient-box'
+			className={`${styles.link} ${styles.gradientBox}`}
 			href={socialUrl[social]}
 			target='blank'
 		>
-			<Logo social={social} />
+			<Logo
+				className={styles.socialLogo}
+				social={social}
+			/>
 			<span>{social}</span>
 		</a>
 	)

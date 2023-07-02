@@ -1,10 +1,10 @@
 import Links from './components/Links'
-import './app.scss'
+import styles from './app.module.scss'
 
 export function App() {
 	return (
 		<>
-			<h1>KyuGG</h1>
+			<h1 className={styles.name}>KyuGG</h1>
 			<Links />
 		</>
 	)
