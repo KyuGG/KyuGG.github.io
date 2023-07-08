@@ -19,6 +19,7 @@
 		"gh-pages": "^5.0.0",
 		"sass": "^1.63.6",
 		"typescript": "^5.0.2",
+		"typescript-plugin-css-modules": "^5.0.1",
 		"vite": "^4.3.9"
 	}
 }

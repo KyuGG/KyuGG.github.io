@@ -2,11 +2,13 @@ import Link from './Link'
 import { Social } from './Logo'
 
 const Links: preact.FunctionComponent = () => {
+	const socials = Object.values(Social)
+
 	return (
 		<>
-			<Link social={Social.GitHub} />
-			<Link social={Social.Steam} />
-			<Link social={Social.YouTube} />
+			{socials.map(name => (
+				<Link social={name} />
+			))}
 		</>
 	)
 }
